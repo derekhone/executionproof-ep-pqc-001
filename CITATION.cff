@@ -20,7 +20,9 @@ authors:
     affiliation: "Remnant Fieldworks Inc."
 version: "1.0.0"
 date-released: "2026-10-08"
-license: Apache-2.0
+license:
+  - Apache-2.0
+  - CC-BY-4.0
 keywords:
   - ExecutionProof
   - pre-execution verification
@@ -32,9 +34,8 @@ keywords:
   - FIPS 204
   - preregistration
   - reproducible research
-repository-code: "https://github.com/derekhone/ep-pqc-001"
+repository-code: "https://github.com/derekhone/executionproof-ep-pqc-001"
+url: "https://github.com/derekhone/executionproof-ep-pqc-001"
 notes: >-
-  No DOI has been minted for this work. A DOI and a Zenodo repository entry will be added only
-  after a deposit is explicitly authorized. The repository-code URL is the intended location and
-  may not yet be populated. License is recommended (Apache-2.0 for code, CC-BY-4.0 for
-  documentation and data) but not yet finalized; see LICENSE_RECOMMENDATION.md.
+  License is finalized: Apache-2.0 for source code (LICENSE) and CC-BY-4.0 for documentation and
+  data (LICENSE-docs). The DOI line below will be populated after the Zenodo deposit is created.

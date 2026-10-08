@@ -1,0 +1,26 @@
+EP-PQC-001 — Pre-Execution Post-Quantum Cryptographic Policy Verification
+Copyright 2026 Remnant Fieldworks Inc.
+
+This product includes software developed by Remnant Fieldworks Inc.
+
+LICENSING
+---------
+- Source code (*.py) is licensed under the Apache License, Version 2.0.
+  See the LICENSE file.
+- Documentation and data (*.md, *.json, *.txt, *.pdf, *.docx, results,
+  preregistrations, policy profiles, and ProofRecords) are licensed under the
+  Creative Commons Attribution 4.0 International License (CC BY 4.0).
+  See the LICENSE-docs file.
+
+TRADEMARK
+---------
+ExecutionProof(TM) is a trademark of Remnant Fieldworks Inc. The licenses above
+cover copyright in the code and documents only; they do not grant any right to
+use the "ExecutionProof" name, logo, or other Remnant Fieldworks marks.
+
+STANDARDS CONTEXT
+-----------------
+References to FIPS 203/204/205, NIST, NSA, CNSA 2.0, CNSSP-15, or CISA are for
+standards context only and do not imply endorsement, certification, compliance,
+or affiliation. This work is a software-only research experiment; see the
+"Limitations" section of README.md.

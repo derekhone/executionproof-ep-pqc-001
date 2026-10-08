@@ -1,8 +1,9 @@
 # LICENSE recommendation — EP-PQC-001
 
-**Status: RECOMMENDATION ONLY. No `LICENSE` file has been committed. Until one is, all rights are
-reserved by Remnant Fieldworks Inc.** This document is for Derek's review; the actual license is not
-finalized and nothing here grants any rights yet.
+> **DECISION (2026-10-08, Derek Hone): FINALIZED as Apache-2.0 for source code + CC-BY-4.0 for
+> documentation/data.** The `LICENSE` (Apache-2.0) and `LICENSE-docs` (CC BY 4.0) files are now
+> committed, along with a `NOTICE` carrying copyright and the ExecutionProof™ trademark statement.
+> This document is retained for the rationale that led to that choice.
 
 ## Recommended dual license
 

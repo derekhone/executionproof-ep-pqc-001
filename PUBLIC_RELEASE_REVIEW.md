@@ -1,11 +1,13 @@
 # EP-PQC-001 — Public Release Review (REVIEW ONLY)
 
 **Date:** 2026-10-08 · **Prepared for:** Derek Hone, Remnant Fieldworks Inc.
-**Status:** ⛔ **NOT PUBLISHED.** No GitHub push, no GitHub release, no Zenodo upload, no DOI minted.
-This document shows **exactly** what would be published and flags anything that should block release.
+**Status:** ✅ **REVIEW CLEARED — PUBLISH GO received 2026-10-08.** This document is retained as the
+pre-publication review record. It shows exactly what was approved for release and the blocker
+assessment that cleared it. Final decisions applied at publication: license = Apache-2.0 (code) +
+CC-BY-4.0 (docs/data); repository = `derekhone/executionproof-ep-pqc-001`.
 
-> Standing gate: nothing in this package goes public until a **separate written "PUBLISH GO"** from
-> Derek. This review does not itself authorize any external action.
+> This review was the gate; the separate written "PUBLISH GO" authorizing external action was
+> received and is recorded above.
 
 ---
 
