@@ -153,11 +153,17 @@ with them.
 
 See `CITATION.cff`. This work is archived on Zenodo:
 
-> **Concept DOI (always resolves to the latest version):** [10.5281/zenodo.23248211](https://doi.org/10.5281/zenodo.23248211)
-> **Version DOI (this release, v1.0.0):** [10.5281/zenodo.23248212](https://doi.org/10.5281/zenodo.23248212)
+> **Concept DOI** (always resolves to the latest version): [10.5281/zenodo.23248211](https://doi.org/10.5281/zenodo.23248211)
+> **Version DOI — v1.0.1** (this release, current): [10.5281/zenodo.23248351](https://doi.org/10.5281/zenodo.23248351)
+> **Version DOI — v1.0.0** (original release, preserved): [10.5281/zenodo.23248212](https://doi.org/10.5281/zenodo.23248212)
+
+The **concept DOI** (`…211`) is version-independent and always points to the newest version. Each
+release also has its own immutable **version DOI**. To cite this specific release, use the v1.0.1
+version DOI; to cite the work in general, use the concept DOI.
 
 GitHub source: <https://github.com/derekhone/executionproof-ep-pqc-001> ·
-Release: <https://github.com/derekhone/executionproof-ep-pqc-001/releases/tag/v1.0.0>
+Latest release: <https://github.com/derekhone/executionproof-ep-pqc-001/releases/tag/v1.0.1> ·
+Original release (preserved): <https://github.com/derekhone/executionproof-ep-pqc-001/releases/tag/v1.0.0>
 
 ## License
 

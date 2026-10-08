@@ -1,7 +1,7 @@
 {
   "upload_type": "software",
   "title": "EP-PQC-001 — Pre-Execution Post-Quantum Cryptographic Policy Verification (an ExecutionProof experiment)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publication_date": "2026-10-08",
   "access_right": "open",
   "license": "Apache-2.0",
@@ -21,12 +21,18 @@
     },
     {
       "relation": "isDerivedFrom",
-      "identifier": "https://github.com/derekhone/executionproof-ep-pqc-001/releases/tag/v1.0.0",
+      "identifier": "https://github.com/derekhone/executionproof-ep-pqc-001/releases/tag/v1.0.1",
       "scheme": "url",
+      "resource_type": "software"
+    },
+    {
+      "relation": "isNewVersionOf",
+      "identifier": "10.5281/zenodo.23248212",
+      "scheme": "doi",
       "resource_type": "software"
     }
   ],
-  "notes": "License: Apache-2.0 for source code; CC-BY-4.0 for documentation and data. One disclosed, non-fatal erratum: R1/proofrecords/proofrecord_PQC-17b.json carries an internal request_id of 'PQC-17a' (a generator typo); the record is otherwise correct (decision HOLD, reason EVID_NONCE_REPLAY) and its record_hash matches the frozen raw_decisions.json row for PQC-17b exactly. The frozen artifact was intentionally NOT modified, because editing a sealed ProofRecord would change its record_hash and break the evidence chain. See ERRATA.md. All ProofRecords self-verify via the standalone verify_proofrecords.py and reconcile against a consolidated HASHES.txt manifest.",
+  "notes": "v1.0.1 is a documentation-only correction of v1.0.0: it corrects the DOI terminology so the concept DOI (10.5281/zenodo.23248211, always latest) is unambiguously distinguished from each version DOI (v1.0.1 = 10.5281/zenodo.23248351, current; v1.0.0 = 10.5281/zenodo.23248212, original, preserved). NO scientific artifact changed between v1.0.0 and v1.0.1 - the engine, preregistrations, policies, ProofRecords, raw results, scored results, and both verdicts (root = PARTIAL/safety-PASS; R1 = PASS) are byte-identical. v1.0.0 remains permanently preserved and publicly visible. License: Apache-2.0 for source code; CC-BY-4.0 for documentation and data. One disclosed, non-fatal erratum: R1/proofrecords/proofrecord_PQC-17b.json carries an internal request_id of 'PQC-17a' (a generator typo); the record is otherwise correct (decision HOLD, reason EVID_NONCE_REPLAY) and its record_hash matches the frozen raw_decisions.json row for PQC-17b exactly. The frozen artifact was intentionally NOT modified, because editing a sealed ProofRecord would change its record_hash and break the evidence chain. See ERRATA.md. All ProofRecords self-verify via the standalone verify_proofrecords.py and reconcile against a consolidated HASHES.txt manifest.",
   "keywords": [
     "ExecutionProof",
     "pre-execution verification",

@@ -1,9 +1,16 @@
 # Release notes
 
 **Release title:**
-`EP-PQC-001 v1.0.0 — Pre-Execution Post-Quantum Cryptographic Policy Verification`
+`EP-PQC-001 v1.0.1 — Pre-Execution Post-Quantum Cryptographic Policy Verification`
 
-**Tag:** `v1.0.0`  ·  **Date:** 2026-10-08  ·  **Status:** review candidate (not published)
+**Tag:** `v1.0.1`  ·  **Date:** 2026-10-08  ·  **Status:** published (GitHub + Zenodo)
+
+> **v1.0.1 is a documentation-only correction of v1.0.0.** It corrects the DOI terminology so the
+> package unambiguously distinguishes the Zenodo **concept DOI** from each **version DOI**. **No**
+> scientific artifact changed: the engine, preregistrations, policies, ProofRecords, raw results,
+> scored results, and both verdicts (root = PARTIAL / safety-PASS; R1 = PASS) are byte-identical to
+> v1.0.0. **v1.0.0 is preserved permanently** and remains publicly visible (GitHub tag `v1.0.0`,
+> Zenodo version DOI `10.5281/zenodo.23248212`). See `CHANGELOG.md`.
 
 ---
 
@@ -60,6 +67,6 @@ See the README "Limitations" section.
 
 ## Citation & license
 
-- Citation metadata: `CITATION.cff`. **Zenodo concept DOI: [10.5281/zenodo.23248211](https://doi.org/10.5281/zenodo.23248211)** (always latest); **version DOI (v1.0.0): [10.5281/zenodo.23248212](https://doi.org/10.5281/zenodo.23248212)**.
+- Citation metadata: `CITATION.cff`. **Concept DOI: [10.5281/zenodo.23248211](https://doi.org/10.5281/zenodo.23248211)** (always latest); **v1.0.1 version DOI: [10.5281/zenodo.23248351](https://doi.org/10.5281/zenodo.23248351)** (current); **v1.0.0 version DOI: [10.5281/zenodo.23248212](https://doi.org/10.5281/zenodo.23248212)** (original, preserved).
 - License: **Apache-2.0** for code (`LICENSE`) + **CC BY 4.0** for docs/data (`LICENSE-docs`); see `NOTICE`
   and `LICENSE_RECOMMENDATION.md` for rationale.
