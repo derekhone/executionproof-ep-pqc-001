@@ -1,0 +1,52 @@
+{
+  "request_id": "PQC-02",
+  "timestamp": 1760000000,
+  "eval_time_iso": "2025-10-09T08:53:20Z",
+  "policy_id": "EP-PQC-POLICY-001",
+  "policy_version": "A-2027.0",
+  "policy_hash": "a1642a7413bb6b2f99a64fcfc8781c1b5ee28ca9b5fbea58d8e5c05bab4b14e7",
+  "requester": "svc-vpn-gw",
+  "action": "kem-establish",
+  "claimed_algorithm": "RSA-2048",
+  "derived_algorithm": "RSA-2048",
+  "authority": {
+    "name": "authority",
+    "passed": true,
+    "reason_codes": [],
+    "detail": "requester authorized & custodian matched"
+  },
+  "evidence": {
+    "name": "evidence",
+    "passed": true,
+    "reason_codes": [],
+    "detail": "evidence present, authentic, fresh, bound, and consistent"
+  },
+  "constraint": {
+    "name": "constraint",
+    "passed": false,
+    "reason_codes": [
+      "CONSTRAINT_LEGACY_ALGORITHM"
+    ],
+    "detail": "legacy algorithm 'RSA-2048' not permitted under A-2027.0 (PQC required)"
+  },
+  "decision": "HOLD",
+  "reason_codes": [
+    "CONSTRAINT_LEGACY_ALGORITHM"
+  ],
+  "artifact_hashes": {
+    "artifact_sha256": "27dbb84a5679e21e0ef250ba42851b9b1a59a0e252eb3bbec4b6f428bac74a12",
+    "manifest_sha256": "7d36086a2739e6eff5dbf5a3db08bdb510c28028f5eb45f179839d6222baf5cd"
+  },
+  "nonce": "n02",
+  "gateway_status": "REFUSED",
+  "boundary_crossed": false,
+  "environment": {
+    "python": "3.11.6",
+    "platform": "Linux-6.17.0-1019-aws-x86_64-with-glibc2.36",
+    "cryptography": "46.0.7",
+    "kyber_py": "1.2.0",
+    "dilithium_py": "n/a",
+    "eval_clock_T0": 1760000000
+  },
+  "record_hash": "81a981b7edbbc721477965cd00dee9622ea834d932e67faba074b79c9632fc90"
+}

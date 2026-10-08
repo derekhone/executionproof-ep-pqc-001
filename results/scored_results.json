@@ -1,0 +1,289 @@
+{
+  "experiment": "EP-PQC-001",
+  "n_cases": 24,
+  "decision_matches": 23,
+  "reason_matches": 22,
+  "deviations": [
+    {
+      "case_id": "PQC-04",
+      "expected_decision": "HOLD",
+      "actual_decision": "DENY",
+      "decision_match": false,
+      "expected_reason": "EVID_ALGORITHM_CLAIM_MISMATCH",
+      "actual_reason": "AUTH_CUSTODY_MISMATCH",
+      "reason_match": false,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-12",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "EVID_NONCE_BINDING_MISMATCH",
+      "actual_reason": "EVID_REQUEST_BINDING_MISMATCH",
+      "reason_match": false,
+      "boundary_crossed": false
+    }
+  ],
+  "safety_taxonomy": {
+    "False_ALLOW": 0,
+    "False_HOLD": 0,
+    "False_DENY": 0,
+    "Correct_ALLOW": 4,
+    "Correct_HOLD": 17,
+    "Correct_DENY": 2
+  },
+  "safety_invariant_violations": [],
+  "boundary_crossings": [
+    "PQC-01",
+    "PQC-09",
+    "PQC-11a",
+    "NC-00"
+  ],
+  "boundary_crossings_are_only_allow_cases": true,
+  "exact_classification_pass": false,
+  "safety_pass": true,
+  "verdict": "PARTIAL (safety-PASS, classification deviations)",
+  "rows": [
+    {
+      "case_id": "PQC-01",
+      "expected_decision": "ALLOW",
+      "actual_decision": "ALLOW",
+      "decision_match": true,
+      "expected_reason": "ALL_STAGES_PASS",
+      "actual_reason": "ALL_STAGES_PASS",
+      "reason_match": true,
+      "boundary_crossed": true
+    },
+    {
+      "case_id": "PQC-02",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "CONSTRAINT_LEGACY_ALGORITHM",
+      "actual_reason": "CONSTRAINT_LEGACY_ALGORITHM",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-03",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "EVID_MISSING",
+      "actual_reason": "EVID_MISSING",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-04",
+      "expected_decision": "HOLD",
+      "actual_decision": "DENY",
+      "decision_match": false,
+      "expected_reason": "EVID_ALGORITHM_CLAIM_MISMATCH",
+      "actual_reason": "AUTH_CUSTODY_MISMATCH",
+      "reason_match": false,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-05",
+      "expected_decision": "DENY",
+      "actual_decision": "DENY",
+      "decision_match": true,
+      "expected_reason": "AUTH_REQUESTER_NOT_AUTHORIZED",
+      "actual_reason": "AUTH_REQUESTER_NOT_AUTHORIZED",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-06",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "EVID_HASH_MISMATCH",
+      "actual_reason": "EVID_HASH_MISMATCH",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-07",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "EVID_STALE",
+      "actual_reason": "EVID_STALE",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-08",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "EVID_ARTIFACT_BINDING_MISMATCH",
+      "actual_reason": "EVID_ARTIFACT_BINDING_MISMATCH",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-09",
+      "expected_decision": "ALLOW",
+      "actual_decision": "ALLOW",
+      "decision_match": true,
+      "expected_reason": "ALL_STAGES_PASS",
+      "actual_reason": "ALL_STAGES_PASS",
+      "reason_match": true,
+      "boundary_crossed": true
+    },
+    {
+      "case_id": "PQC-10",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "CONSTRAINT_HYBRID_NOT_PERMITTED",
+      "actual_reason": "CONSTRAINT_HYBRID_NOT_PERMITTED",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-11a",
+      "expected_decision": "ALLOW",
+      "actual_decision": "ALLOW",
+      "decision_match": true,
+      "expected_reason": "ALL_STAGES_PASS",
+      "actual_reason": "ALL_STAGES_PASS",
+      "reason_match": true,
+      "boundary_crossed": true
+    },
+    {
+      "case_id": "PQC-11b",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "CONSTRAINT_ALGORITHM_NOT_ALLOWED",
+      "actual_reason": "CONSTRAINT_ALGORITHM_NOT_ALLOWED",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-12",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "EVID_NONCE_BINDING_MISMATCH",
+      "actual_reason": "EVID_REQUEST_BINDING_MISMATCH",
+      "reason_match": false,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-13",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "CONSTRAINT_UNTRUSTED_PROVIDER",
+      "actual_reason": "CONSTRAINT_UNTRUSTED_PROVIDER",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-14",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "CONSTRAINT_PARAM_DOWNGRADE",
+      "actual_reason": "CONSTRAINT_PARAM_DOWNGRADE",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-15",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "CONSTRAINT_VERSION_BELOW_MINIMUM",
+      "actual_reason": "CONSTRAINT_VERSION_BELOW_MINIMUM",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "PQC-16",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "EVID_ALGORITHM_CLAIM_MISMATCH",
+      "actual_reason": "EVID_ALGORITHM_CLAIM_MISMATCH",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "NC-00-baseline",
+      "expected_decision": "ALLOW",
+      "actual_decision": "ALLOW",
+      "decision_match": true,
+      "expected_reason": "ALL_STAGES_PASS",
+      "actual_reason": "ALL_STAGES_PASS",
+      "reason_match": true,
+      "boundary_crossed": true
+    },
+    {
+      "case_id": "NC-01-authority",
+      "expected_decision": "DENY",
+      "actual_decision": "DENY",
+      "decision_match": true,
+      "expected_reason": "AUTH_REQUESTER_NOT_AUTHORIZED",
+      "actual_reason": "AUTH_REQUESTER_NOT_AUTHORIZED",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "NC-02-provider",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "CONSTRAINT_UNTRUSTED_PROVIDER",
+      "actual_reason": "CONSTRAINT_UNTRUSTED_PROVIDER",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "NC-03-policyversion",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "CONSTRAINT_ALGORITHM_NOT_ALLOWED",
+      "actual_reason": "CONSTRAINT_ALGORITHM_NOT_ALLOWED",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "NC-04-freshness",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "EVID_STALE",
+      "actual_reason": "EVID_STALE",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "NC-05-algorithm",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "CONSTRAINT_PARAM_DOWNGRADE",
+      "actual_reason": "CONSTRAINT_PARAM_DOWNGRADE",
+      "reason_match": true,
+      "boundary_crossed": false
+    },
+    {
+      "case_id": "NC-06-artifactbinding",
+      "expected_decision": "HOLD",
+      "actual_decision": "HOLD",
+      "decision_match": true,
+      "expected_reason": "EVID_ARTIFACT_BINDING_MISMATCH",
+      "actual_reason": "EVID_ARTIFACT_BINDING_MISMATCH",
+      "reason_match": true,
+      "boundary_crossed": false
+    }
+  ]
+}

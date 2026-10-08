@@ -1,0 +1,14 @@
+# EP-PQC-001 — pinned reproducibility environment
+# Resolves the ML-DSA ("dilithium_py":"n/a") dependency record gap.
+# Verified on the host that produced the frozen artifacts (see DEPENDENCIES.md):
+#   Python 3.11.6, Linux-6.17.0-1019-aws-x86_64-with-glibc2.36
+#
+# Exact, hash-reproducible pins. Install with:
+#   python3 -m pip install -r requirements.txt
+#
+# ML-KEM / FIPS 203 (encapsulation, derived-algorithm functional probe)
+kyber-py==1.2.0
+# ML-DSA / FIPS 204 (evidence-manifest signing/verification by the EvidenceAuthority)
+dilithium-py==1.4.0
+# Classical RSA / ECDH DER parsing (derived-algorithm probe for non-PQC artifacts)
+cryptography==46.0.7

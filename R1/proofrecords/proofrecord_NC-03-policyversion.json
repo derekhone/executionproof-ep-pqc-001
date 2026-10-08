@@ -1,0 +1,52 @@
+{
+  "request_id": "NC-03",
+  "timestamp": 1760000000,
+  "eval_time_iso": "2025-10-09T08:53:20Z",
+  "policy_id": "EP-PQC-POLICY-001",
+  "policy_version": "B-2030.0",
+  "policy_hash": "99663b478448d29cc65925ed9a27dbea4897e1d577ba7a10e53ff2b693542bb8",
+  "requester": "svc-tls-frontend",
+  "action": "kem-establish",
+  "claimed_algorithm": "ML-KEM-768",
+  "derived_algorithm": "ML-KEM-768",
+  "authority": {
+    "name": "authority",
+    "passed": true,
+    "reason_codes": [],
+    "detail": "requester authorized & custodian matched"
+  },
+  "evidence": {
+    "name": "evidence",
+    "passed": true,
+    "reason_codes": [],
+    "detail": "evidence present, authentic, fresh, bound, and consistent"
+  },
+  "constraint": {
+    "name": "constraint",
+    "passed": false,
+    "reason_codes": [
+      "CONSTRAINT_ALGORITHM_NOT_ALLOWED"
+    ],
+    "detail": "algorithm 'ML-KEM-768' not in allowed set for B-2030.0"
+  },
+  "decision": "HOLD",
+  "reason_codes": [
+    "CONSTRAINT_ALGORITHM_NOT_ALLOWED"
+  ],
+  "artifact_hashes": {
+    "artifact_sha256": "9a324119824784a7e6903e850ba1238101d2b301ce220757928ad161ff782349",
+    "manifest_sha256": "81e0f71af3fae9453856df5c90fb2772c5b530ab3ae2c47804241baaafe945d9"
+  },
+  "nonce": "nc03",
+  "gateway_status": "REFUSED",
+  "boundary_crossed": false,
+  "environment": {
+    "python": "3.11.6",
+    "platform": "Linux-6.17.0-1019-aws-x86_64-with-glibc2.36",
+    "cryptography": "46.0.7",
+    "kyber_py": "1.2.0",
+    "dilithium_py": "n/a",
+    "eval_clock_T0": 1760000000
+  },
+  "record_hash": "7a4c548bcd2f9d206939c2f26a77bee4de66ebdf05d079596fee9f3b477f9c19"
+}

@@ -1,0 +1,366 @@
+{
+  "experiment": "EP-PQC-001",
+  "environment": {
+    "python": "3.11.6",
+    "platform": "Linux-6.17.0-1019-aws-x86_64-with-glibc2.36",
+    "cryptography": "46.0.7",
+    "kyber_py": "1.2.0",
+    "dilithium_py": "n/a",
+    "eval_clock_T0": 1760000000
+  },
+  "challenges_sha256": "946eef7e0c1330694b4a44e5f7242d49cdffdfbe4b1b84c3f42ecbb283237430",
+  "policy_hashes": {
+    "EP-PQC-POLICY-001-A.json": "a1642a7413bb6b2f99a64fcfc8781c1b5ee28ca9b5fbea58d8e5c05bab4b14e7",
+    "EP-PQC-POLICY-001-B.json": "99663b478448d29cc65925ed9a27dbea4897e1d577ba7a10e53ff2b693542bb8"
+  },
+  "authority_pubkey_sha256": "4d6465249c07ee4ea60e7017b28f7dcc45e93495062b6e87b47fbd82ca1a0ba6",
+  "n_cases": 24,
+  "boundary_crossings": [
+    {
+      "request_id": "PQC-01",
+      "performed": "ML-KEM-encapsulation",
+      "family": "ML-KEM-768",
+      "ciphertext_sha256": "f43c81138c23789f9e7aae9990f70894eb424cc13d18eb8d86724415fefc9691",
+      "shared_secret_sha256": "c88652ace2f5ec823240871308b1cbaf288679663863eca414a6480cd2f51239"
+    },
+    {
+      "request_id": "PQC-09",
+      "performed": "ML-KEM-encapsulation",
+      "family": "ML-KEM-768",
+      "ciphertext_sha256": "e961dcee469657205817d07f976ffca978582460fe0074be8fb64b325d6637dc",
+      "shared_secret_sha256": "6290944e16cf7b2cbf9b0c2666574db87af48a5c335d652a9d31b741855ed6cf"
+    },
+    {
+      "request_id": "PQC-11a",
+      "performed": "ML-KEM-encapsulation",
+      "family": "ML-KEM-768",
+      "ciphertext_sha256": "2c3ad67a273654301f340182aa49e79d450a6756499e853e4188c00215037446",
+      "shared_secret_sha256": "e0c0a4732cbe8831cb887953921b9fa459ce072ef098a64a212d13d295304d83"
+    },
+    {
+      "request_id": "NC-00",
+      "performed": "ML-KEM-encapsulation",
+      "family": "ML-KEM-768",
+      "ciphertext_sha256": "a54f3827c2c9619139ba931edf508614970761c797b190077c88bde5aab4eaf0",
+      "shared_secret_sha256": "661dbe469ae033e47fc79243c89cd1478fa6f3a5c634ecc3b75a72328104e306"
+    }
+  ],
+  "results": [
+    {
+      "case_id": "PQC-01",
+      "decision": "ALLOW",
+      "primary_reason": "ALL_STAGES_PASS",
+      "reason_codes": [
+        "ALL_STAGES_PASS"
+      ],
+      "gateway_status": "EXECUTED",
+      "boundary_crossed": true,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "99369dcfd4ddd80bc14bce33b2dcdd28c2cb08c802100ffc8fe1e3b27088739d"
+    },
+    {
+      "case_id": "PQC-02",
+      "decision": "HOLD",
+      "primary_reason": "CONSTRAINT_LEGACY_ALGORITHM",
+      "reason_codes": [
+        "CONSTRAINT_LEGACY_ALGORITHM"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "RSA-2048",
+      "policy_version": "A-2027.0",
+      "record_hash": "81a981b7edbbc721477965cd00dee9622ea834d932e67faba074b79c9632fc90"
+    },
+    {
+      "case_id": "PQC-03",
+      "decision": "HOLD",
+      "primary_reason": "EVID_MISSING",
+      "reason_codes": [
+        "EVID_MISSING"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "(not-derived)",
+      "policy_version": "A-2027.0",
+      "record_hash": "3b00734488834bb08f299cb8e82de5c43096516232a6cab2f0d38debc3980371"
+    },
+    {
+      "case_id": "PQC-04",
+      "decision": "DENY",
+      "primary_reason": "AUTH_CUSTODY_MISMATCH",
+      "reason_codes": [
+        "AUTH_CUSTODY_MISMATCH"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "(not-derived)",
+      "policy_version": "A-2027.0",
+      "record_hash": "621ee84ebdcb5159d2f5694f0baa29fd7c2f71c5544d7bd7e47057afada8e0eb"
+    },
+    {
+      "case_id": "PQC-05",
+      "decision": "DENY",
+      "primary_reason": "AUTH_REQUESTER_NOT_AUTHORIZED",
+      "reason_codes": [
+        "AUTH_REQUESTER_NOT_AUTHORIZED",
+        "AUTH_CUSTODY_MISMATCH"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "(not-derived)",
+      "policy_version": "A-2027.0",
+      "record_hash": "f703e1f6a41e232d4b5aa5db79549e774760b91bda19825386bc03c85693c528"
+    },
+    {
+      "case_id": "PQC-06",
+      "decision": "HOLD",
+      "primary_reason": "EVID_HASH_MISMATCH",
+      "reason_codes": [
+        "EVID_HASH_MISMATCH"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "c30cdc49e9dc6d9396b24e1df8c32ef307439803f31c89259db2b622da3aabd9"
+    },
+    {
+      "case_id": "PQC-07",
+      "decision": "HOLD",
+      "primary_reason": "EVID_STALE",
+      "reason_codes": [
+        "EVID_STALE"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "bd85e7415f6b1eff50ac0227c80d997cb6bf5d7b7a16f30651952e0930bdd51d"
+    },
+    {
+      "case_id": "PQC-08",
+      "decision": "HOLD",
+      "primary_reason": "EVID_ARTIFACT_BINDING_MISMATCH",
+      "reason_codes": [
+        "EVID_ARTIFACT_BINDING_MISMATCH"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "949060fa34b0237d0f73ef40578940a0678542f0acdf098c86bd84281aaf58d3"
+    },
+    {
+      "case_id": "PQC-09",
+      "decision": "ALLOW",
+      "primary_reason": "ALL_STAGES_PASS",
+      "reason_codes": [
+        "ALL_STAGES_PASS"
+      ],
+      "gateway_status": "EXECUTED",
+      "boundary_crossed": true,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "4ac1ef681f3797f05319df92ee449ad0a1c2c36d7b624ac07e98dbefc3d261dd"
+    },
+    {
+      "case_id": "PQC-10",
+      "decision": "HOLD",
+      "primary_reason": "CONSTRAINT_HYBRID_NOT_PERMITTED",
+      "reason_codes": [
+        "CONSTRAINT_HYBRID_NOT_PERMITTED"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-1024",
+      "policy_version": "B-2030.0",
+      "record_hash": "fb3203297de341e678de6a7721c5538a52b12d0629c3642bc03cfae68bc7b4cc"
+    },
+    {
+      "case_id": "PQC-11a",
+      "decision": "ALLOW",
+      "primary_reason": "ALL_STAGES_PASS",
+      "reason_codes": [
+        "ALL_STAGES_PASS"
+      ],
+      "gateway_status": "EXECUTED",
+      "boundary_crossed": true,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "f046b7d427646e3595de0c211436c1f95c54c2aad2b6b86d7dd5253f50fbc3ed"
+    },
+    {
+      "case_id": "PQC-11b",
+      "decision": "HOLD",
+      "primary_reason": "CONSTRAINT_ALGORITHM_NOT_ALLOWED",
+      "reason_codes": [
+        "CONSTRAINT_ALGORITHM_NOT_ALLOWED",
+        "CONSTRAINT_HYBRID_NOT_PERMITTED"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "B-2030.0",
+      "record_hash": "b95a313590043bc5b60db231feb100cd22c76b096d31c7256999d7b60c24a7b8"
+    },
+    {
+      "case_id": "PQC-12",
+      "decision": "HOLD",
+      "primary_reason": "EVID_REQUEST_BINDING_MISMATCH",
+      "reason_codes": [
+        "EVID_REQUEST_BINDING_MISMATCH",
+        "EVID_NONCE_BINDING_MISMATCH"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "d00d437b423938599e6dd41a66ae1d7270d4891481b0bc0b4f35c1947b4a7a1c"
+    },
+    {
+      "case_id": "PQC-13",
+      "decision": "HOLD",
+      "primary_reason": "CONSTRAINT_UNTRUSTED_PROVIDER",
+      "reason_codes": [
+        "CONSTRAINT_UNTRUSTED_PROVIDER"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "ae3e8c891a48b7a8d9ba6610e2c2368c304c14d1792929c7f559ecff06b2352b"
+    },
+    {
+      "case_id": "PQC-14",
+      "decision": "HOLD",
+      "primary_reason": "CONSTRAINT_PARAM_DOWNGRADE",
+      "reason_codes": [
+        "CONSTRAINT_PARAM_DOWNGRADE"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-512",
+      "policy_version": "A-2027.0",
+      "record_hash": "b8e4dee6540614288e1f981c554ae4883c4efa377cc85154bc227be1d4fdb99f"
+    },
+    {
+      "case_id": "PQC-15",
+      "decision": "HOLD",
+      "primary_reason": "CONSTRAINT_VERSION_BELOW_MINIMUM",
+      "reason_codes": [
+        "CONSTRAINT_VERSION_BELOW_MINIMUM"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "eb4e5fda5828ad15b06d9fae9f3119a343e91dc4fdd351520b8995e0c4fb2697"
+    },
+    {
+      "case_id": "PQC-16",
+      "decision": "HOLD",
+      "primary_reason": "EVID_ALGORITHM_CLAIM_MISMATCH",
+      "reason_codes": [
+        "EVID_ALGORITHM_CLAIM_MISMATCH"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "45b9cdd8d5ba6e7c915aa51fb8ca34930e92250091e78b41530196d85cf4908d"
+    },
+    {
+      "case_id": "NC-00-baseline",
+      "decision": "ALLOW",
+      "primary_reason": "ALL_STAGES_PASS",
+      "reason_codes": [
+        "ALL_STAGES_PASS"
+      ],
+      "gateway_status": "EXECUTED",
+      "boundary_crossed": true,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "08c0fda42eff42e81fd8e3e17ce811616af21bcef171816fb22b52c8908ab8c0"
+    },
+    {
+      "case_id": "NC-01-authority",
+      "decision": "DENY",
+      "primary_reason": "AUTH_REQUESTER_NOT_AUTHORIZED",
+      "reason_codes": [
+        "AUTH_REQUESTER_NOT_AUTHORIZED",
+        "AUTH_CUSTODY_MISMATCH"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "(not-derived)",
+      "policy_version": "A-2027.0",
+      "record_hash": "57d3ed8a1a67eaefd8175bdb76c0efe33f35be9493a3c529caa01204e716b698"
+    },
+    {
+      "case_id": "NC-02-provider",
+      "decision": "HOLD",
+      "primary_reason": "CONSTRAINT_UNTRUSTED_PROVIDER",
+      "reason_codes": [
+        "CONSTRAINT_UNTRUSTED_PROVIDER"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "a0725f77101fd390ea4b11d6d7afb5133cae06142f29b39db13f35636411ccaf"
+    },
+    {
+      "case_id": "NC-03-policyversion",
+      "decision": "HOLD",
+      "primary_reason": "CONSTRAINT_ALGORITHM_NOT_ALLOWED",
+      "reason_codes": [
+        "CONSTRAINT_ALGORITHM_NOT_ALLOWED"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "B-2030.0",
+      "record_hash": "f9f22dbc10d06bb63e9dfea8ba17b9b5ad6733b2114edfde740ea432f83b7076"
+    },
+    {
+      "case_id": "NC-04-freshness",
+      "decision": "HOLD",
+      "primary_reason": "EVID_STALE",
+      "reason_codes": [
+        "EVID_STALE"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "ecccbdbb694d56ee2dd47e0bcf879b4c4a4d8ebba37ff00538470614fae4db6a"
+    },
+    {
+      "case_id": "NC-05-algorithm",
+      "decision": "HOLD",
+      "primary_reason": "CONSTRAINT_PARAM_DOWNGRADE",
+      "reason_codes": [
+        "CONSTRAINT_PARAM_DOWNGRADE"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-512",
+      "policy_version": "A-2027.0",
+      "record_hash": "cdf01d105f74844d57bad26aceaf665d6ab3d021f20b3ec48a2d024adb45141c"
+    },
+    {
+      "case_id": "NC-06-artifactbinding",
+      "decision": "HOLD",
+      "primary_reason": "EVID_ARTIFACT_BINDING_MISMATCH",
+      "reason_codes": [
+        "EVID_ARTIFACT_BINDING_MISMATCH"
+      ],
+      "gateway_status": "REFUSED",
+      "boundary_crossed": false,
+      "derived_algorithm": "ML-KEM-768",
+      "policy_version": "A-2027.0",
+      "record_hash": "83dc80df335375f3dd9a6133d15fa66b0c67e33ccab9250db0b036659a8c013c"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "request_id": "PQC-04",
+  "timestamp": 1760000000,
+  "eval_time_iso": "2025-10-09T08:53:20Z",
+  "policy_id": "EP-PQC-POLICY-001",
+  "policy_version": "A-2027.0",
+  "policy_hash": "a1642a7413bb6b2f99a64fcfc8781c1b5ee28ca9b5fbea58d8e5c05bab4b14e7",
+  "requester": "svc-tls-frontend",
+  "action": "kem-establish",
+  "claimed_algorithm": "ML-KEM-768",
+  "derived_algorithm": "(not-derived)",
+  "authority": {
+    "name": "authority",
+    "passed": false,
+    "reason_codes": [
+      "AUTH_CUSTODY_MISMATCH"
+    ],
+    "detail": "requester 'svc-tls-frontend' is not custodian 'svc-vpn-gw' of KEY-RSA2048"
+  },
+  "evidence": {
+    "name": "(skipped)",
+    "passed": false,
+    "reason_codes": [
+      "NOT_EVALUATED"
+    ],
+    "detail": "stage not reached"
+  },
+  "constraint": {
+    "name": "(skipped)",
+    "passed": false,
+    "reason_codes": [
+      "NOT_EVALUATED"
+    ],
+    "detail": "stage not reached"
+  },
+  "decision": "DENY",
+  "reason_codes": [
+    "AUTH_CUSTODY_MISMATCH"
+  ],
+  "artifact_hashes": {},
+  "nonce": "n04",
+  "gateway_status": "REFUSED",
+  "boundary_crossed": false,
+  "environment": {
+    "python": "3.11.6",
+    "platform": "Linux-6.17.0-1019-aws-x86_64-with-glibc2.36",
+    "cryptography": "46.0.7",
+    "kyber_py": "1.2.0",
+    "dilithium_py": "n/a",
+    "eval_clock_T0": 1760000000
+  },
+  "record_hash": "621ee84ebdcb5159d2f5694f0baa29fd7c2f71c5544d7bd7e47057afada8e0eb"
+}

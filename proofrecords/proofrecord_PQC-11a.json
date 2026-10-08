@@ -1,0 +1,56 @@
+{
+  "request_id": "PQC-11a",
+  "timestamp": 1760000000,
+  "eval_time_iso": "2025-10-09T08:53:20Z",
+  "policy_id": "EP-PQC-POLICY-001",
+  "policy_version": "A-2027.0",
+  "policy_hash": "a1642a7413bb6b2f99a64fcfc8781c1b5ee28ca9b5fbea58d8e5c05bab4b14e7",
+  "requester": "svc-tls-frontend",
+  "action": "kem-establish",
+  "claimed_algorithm": "ML-KEM-768",
+  "derived_algorithm": "ML-KEM-768",
+  "authority": {
+    "name": "authority",
+    "passed": true,
+    "reason_codes": [],
+    "detail": "requester authorized & custodian matched"
+  },
+  "evidence": {
+    "name": "evidence",
+    "passed": true,
+    "reason_codes": [],
+    "detail": "evidence present, authentic, fresh, bound, and consistent"
+  },
+  "constraint": {
+    "name": "constraint",
+    "passed": true,
+    "reason_codes": [],
+    "detail": "constraints satisfied under A-2027.0"
+  },
+  "decision": "ALLOW",
+  "reason_codes": [
+    "ALL_STAGES_PASS"
+  ],
+  "artifact_hashes": {
+    "artifact_sha256": "ef787e9dd4ecb6aa94f129101916f42aff091d1765828bcb4c61d6a0296d746b",
+    "manifest_sha256": "2eaf69f64904ca63681060a6052ef9a58de8fd8396f38c9c8cf87c3ae45a5cf1",
+    "execution_output": {
+      "performed": "ML-KEM-encapsulation",
+      "family": "ML-KEM-768",
+      "ciphertext_sha256": "2c3ad67a273654301f340182aa49e79d450a6756499e853e4188c00215037446",
+      "shared_secret_sha256": "e0c0a4732cbe8831cb887953921b9fa459ce072ef098a64a212d13d295304d83"
+    }
+  },
+  "nonce": "n11a",
+  "gateway_status": "EXECUTED",
+  "boundary_crossed": true,
+  "environment": {
+    "python": "3.11.6",
+    "platform": "Linux-6.17.0-1019-aws-x86_64-with-glibc2.36",
+    "cryptography": "46.0.7",
+    "kyber_py": "1.2.0",
+    "dilithium_py": "n/a",
+    "eval_clock_T0": 1760000000
+  },
+  "record_hash": "f046b7d427646e3595de0c211436c1f95c54c2aad2b6b86d7dd5253f50fbc3ed"
+}

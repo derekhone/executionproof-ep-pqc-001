@@ -1,0 +1,161 @@
+{
+  "experiment": "EP-PQC-001R1",
+  "expected": [
+    {
+      "case_id": "PQC-01",
+      "expected_decision": "ALLOW",
+      "expected_primary_reason": "ALL_STAGES_PASS",
+      "rationale": "Fully valid PQC request."
+    },
+    {
+      "case_id": "PQC-02",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_LEGACY_ALGORITHM",
+      "rationale": "Honest legacy RSA under PQC-required policy."
+    },
+    {
+      "case_id": "PQC-03",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_MISSING",
+      "rationale": "No evidence supplied."
+    },
+    {
+      "case_id": "PQC-04",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_ALGORITHM_CLAIM_MISMATCH",
+      "rationale": "Claims ML-KEM-768 but artifact independently derived as RSA-2048; authority passes (custodian correct) so EVIDENCE catches it."
+    },
+    {
+      "case_id": "PQC-05",
+      "expected_decision": "DENY",
+      "expected_primary_reason": "AUTH_REQUESTER_NOT_AUTHORIZED",
+      "rationale": "Unauthorized requester."
+    },
+    {
+      "case_id": "PQC-06",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_HASH_MISMATCH",
+      "rationale": "Tampered key bytes."
+    },
+    {
+      "case_id": "PQC-07",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_STALE",
+      "rationale": "Stale evidence."
+    },
+    {
+      "case_id": "PQC-08",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_ARTIFACT_BINDING_MISMATCH",
+      "rationale": "Evidence for a different key."
+    },
+    {
+      "case_id": "PQC-09",
+      "expected_decision": "ALLOW",
+      "expected_primary_reason": "ALL_STAGES_PASS",
+      "rationale": "Approved hybrid under policy A."
+    },
+    {
+      "case_id": "PQC-10",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_HYBRID_NOT_PERMITTED",
+      "rationale": "Hybrid under PQC-only policy B."
+    },
+    {
+      "case_id": "PQC-11a",
+      "expected_decision": "ALLOW",
+      "expected_primary_reason": "ALL_STAGES_PASS",
+      "rationale": "Rollover pt1 under A."
+    },
+    {
+      "case_id": "PQC-11b",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_ALGORITHM_NOT_ALLOWED",
+      "rationale": "Rollover pt2 under B, fresh nonce."
+    },
+    {
+      "case_id": "PQC-12",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_REQUEST_BINDING_MISMATCH",
+      "rationale": "Cross-request replay; request-binding is the dominant anti-replay control."
+    },
+    {
+      "case_id": "PQC-13",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_UNTRUSTED_PROVIDER",
+      "rationale": "Untrusted provider."
+    },
+    {
+      "case_id": "PQC-14",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_PARAM_DOWNGRADE",
+      "rationale": "Parameter downgrade."
+    },
+    {
+      "case_id": "PQC-15",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_VERSION_BELOW_MINIMUM",
+      "rationale": "Version below minimum."
+    },
+    {
+      "case_id": "PQC-16",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_ALGORITHM_CLAIM_MISMATCH",
+      "rationale": "Substitution 1024 vs 768."
+    },
+    {
+      "case_id": "PQC-17a",
+      "expected_decision": "ALLOW",
+      "expected_primary_reason": "ALL_STAGES_PASS",
+      "rationale": "Valid request; consumes nonce n17."
+    },
+    {
+      "case_id": "PQC-17b",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_NONCE_REPLAY",
+      "rationale": "Replay of identical evidence for the same request; nonce n17 already consumed."
+    },
+    {
+      "case_id": "NC-00-baseline",
+      "expected_decision": "ALLOW",
+      "expected_primary_reason": "ALL_STAGES_PASS",
+      "rationale": "Unchanged baseline must ALLOW."
+    },
+    {
+      "case_id": "NC-01-authority",
+      "expected_decision": "DENY",
+      "expected_primary_reason": "AUTH_REQUESTER_NOT_AUTHORIZED",
+      "rationale": "Only authority changed."
+    },
+    {
+      "case_id": "NC-02-provider",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_UNTRUSTED_PROVIDER",
+      "rationale": "Only provider changed."
+    },
+    {
+      "case_id": "NC-03-policyversion",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_ALGORITHM_NOT_ALLOWED",
+      "rationale": "Only policy version changed."
+    },
+    {
+      "case_id": "NC-04-freshness",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_STALE",
+      "rationale": "Only freshness changed."
+    },
+    {
+      "case_id": "NC-05-algorithm",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_PARAM_DOWNGRADE",
+      "rationale": "Only algorithm changed."
+    },
+    {
+      "case_id": "NC-06-artifactbinding",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_ARTIFACT_BINDING_MISMATCH",
+      "rationale": "Only artifact binding changed."
+    }
+  ]
+}

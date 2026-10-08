@@ -1,0 +1,18 @@
+{
+  "policy_id": "EP-PQC-POLICY-001",
+  "version": "B-2030.0",
+  "label": "EXPERIMENTAL POLICY PROFILE — NOT a statement of universal federal requirement",
+  "description": "Later rollover profile for EP-PQC-001. Tightens the transitional profile: requires ML-KEM-1024 (parameter rank 5) exclusively and withdraws permission for hybrid transition mode (PQC-only exclusive-use state). Used to test policy-rollover WITHOUT any cached authorization.",
+  "provenance_note": "Experiment-local design choice modeling a later exclusive-use milestone. Not a claim that any specific calendar date mandates this of any organization.",
+  "allowed_algorithms": ["ML-KEM-1024"],
+  "param_rank": {"ML-KEM-512": 1, "ML-KEM-768": 3, "ML-KEM-1024": 5},
+  "min_param_rank": 5,
+  "allowed_libraries": ["kyber-py", "RF-PQC-REF"],
+  "min_library_version": {"kyber-py": "1.2.0", "RF-PQC-REF": "1.0.0"},
+  "hybrid_allowed": false,
+  "require_hybrid": false,
+  "evidence_freshness_seconds": 3600,
+  "legacy_algorithms_explicitly_prohibited": ["RSA-2048", "RSA-3072", "ECDH-secp256r1", "ECDH-secp384r1"],
+  "required_evidence_fields": ["artifact_ref", "artifact_sha256", "issued_at", "nonce", "request_id", "provider", "version"],
+  "provenance_requirements": "Evidence manifest MUST be signed by the EP-PQC evidence authority (ML-DSA-65) whose public-key fingerprint is pinned in the preregistration."
+}

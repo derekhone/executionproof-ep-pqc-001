@@ -1,0 +1,52 @@
+{
+  "request_id": "NC-02",
+  "timestamp": 1760000000,
+  "eval_time_iso": "2025-10-09T08:53:20Z",
+  "policy_id": "EP-PQC-POLICY-001",
+  "policy_version": "A-2027.0",
+  "policy_hash": "a1642a7413bb6b2f99a64fcfc8781c1b5ee28ca9b5fbea58d8e5c05bab4b14e7",
+  "requester": "svc-tls-frontend",
+  "action": "kem-establish",
+  "claimed_algorithm": "ML-KEM-768",
+  "derived_algorithm": "ML-KEM-768",
+  "authority": {
+    "name": "authority",
+    "passed": true,
+    "reason_codes": [],
+    "detail": "requester authorized & custodian matched"
+  },
+  "evidence": {
+    "name": "evidence",
+    "passed": true,
+    "reason_codes": [],
+    "detail": "evidence present, authentic, fresh, bound, and consistent"
+  },
+  "constraint": {
+    "name": "constraint",
+    "passed": false,
+    "reason_codes": [
+      "CONSTRAINT_UNTRUSTED_PROVIDER"
+    ],
+    "detail": "library/provider 'sketchy-pqc-lib' not approved"
+  },
+  "decision": "HOLD",
+  "reason_codes": [
+    "CONSTRAINT_UNTRUSTED_PROVIDER"
+  ],
+  "artifact_hashes": {
+    "artifact_sha256": "ef787e9dd4ecb6aa94f129101916f42aff091d1765828bcb4c61d6a0296d746b",
+    "manifest_sha256": "e90e3dc4d092760294aeb545f2f0d82d03ca9c95727ecce43b3127e1b6955e47"
+  },
+  "nonce": "nc02",
+  "gateway_status": "REFUSED",
+  "boundary_crossed": false,
+  "environment": {
+    "python": "3.11.6",
+    "platform": "Linux-6.17.0-1019-aws-x86_64-with-glibc2.36",
+    "cryptography": "46.0.7",
+    "kyber_py": "1.2.0",
+    "dilithium_py": "n/a",
+    "eval_clock_T0": 1760000000
+  },
+  "record_hash": "a0725f77101fd390ea4b11d6d7afb5133cae06142f29b39db13f35636411ccaf"
+}

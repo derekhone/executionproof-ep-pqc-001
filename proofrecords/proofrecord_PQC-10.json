@@ -1,0 +1,52 @@
+{
+  "request_id": "PQC-10",
+  "timestamp": 1760000000,
+  "eval_time_iso": "2025-10-09T08:53:20Z",
+  "policy_id": "EP-PQC-POLICY-001",
+  "policy_version": "B-2030.0",
+  "policy_hash": "99663b478448d29cc65925ed9a27dbea4897e1d577ba7a10e53ff2b693542bb8",
+  "requester": "svc-tls-frontend",
+  "action": "kem-establish",
+  "claimed_algorithm": "ML-KEM-1024",
+  "derived_algorithm": "ML-KEM-1024",
+  "authority": {
+    "name": "authority",
+    "passed": true,
+    "reason_codes": [],
+    "detail": "requester authorized & custodian matched"
+  },
+  "evidence": {
+    "name": "evidence",
+    "passed": true,
+    "reason_codes": [],
+    "detail": "evidence present, authentic, fresh, bound, and consistent"
+  },
+  "constraint": {
+    "name": "constraint",
+    "passed": false,
+    "reason_codes": [
+      "CONSTRAINT_HYBRID_NOT_PERMITTED"
+    ],
+    "detail": "hybrid mode presented but B-2030.0 requires PQC-only"
+  },
+  "decision": "HOLD",
+  "reason_codes": [
+    "CONSTRAINT_HYBRID_NOT_PERMITTED"
+  ],
+  "artifact_hashes": {
+    "artifact_sha256": "91fdb211f0565f44d474822500940ef7a106ae02efadb5749074aa53f0731fd4",
+    "manifest_sha256": "0509700447f90e2f0ef58b718b449241c9f9c27632e2d941abe225ae2f8ec43b"
+  },
+  "nonce": "n10",
+  "gateway_status": "REFUSED",
+  "boundary_crossed": false,
+  "environment": {
+    "python": "3.11.6",
+    "platform": "Linux-6.17.0-1019-aws-x86_64-with-glibc2.36",
+    "cryptography": "46.0.7",
+    "kyber_py": "1.2.0",
+    "dilithium_py": "n/a",
+    "eval_clock_T0": 1760000000
+  },
+  "record_hash": "fb3203297de341e678de6a7721c5538a52b12d0629c3642bc03cfae68bc7b4cc"
+}

@@ -1,0 +1,54 @@
+{
+  "request_id": "PQC-17a",
+  "timestamp": 1760000000,
+  "eval_time_iso": "2025-10-09T08:53:20Z",
+  "policy_id": "EP-PQC-POLICY-001",
+  "policy_version": "A-2027.0",
+  "policy_hash": "a1642a7413bb6b2f99a64fcfc8781c1b5ee28ca9b5fbea58d8e5c05bab4b14e7",
+  "requester": "svc-tls-frontend",
+  "action": "kem-establish",
+  "claimed_algorithm": "ML-KEM-768",
+  "derived_algorithm": "ML-KEM-768",
+  "authority": {
+    "name": "authority",
+    "passed": true,
+    "reason_codes": [],
+    "detail": "requester authorized & custodian matched"
+  },
+  "evidence": {
+    "name": "evidence",
+    "passed": false,
+    "reason_codes": [
+      "EVID_NONCE_REPLAY"
+    ],
+    "detail": "nonce n17 already consumed (replay)"
+  },
+  "constraint": {
+    "name": "(skipped)",
+    "passed": false,
+    "reason_codes": [
+      "NOT_EVALUATED"
+    ],
+    "detail": "stage not reached"
+  },
+  "decision": "HOLD",
+  "reason_codes": [
+    "EVID_NONCE_REPLAY"
+  ],
+  "artifact_hashes": {
+    "artifact_sha256": "9a324119824784a7e6903e850ba1238101d2b301ce220757928ad161ff782349",
+    "manifest_sha256": "6b33d108bd1484efbabcca14e4de807a5524bff0e75158fed0c4fece0df21b5b"
+  },
+  "nonce": "n17",
+  "gateway_status": "REFUSED",
+  "boundary_crossed": false,
+  "environment": {
+    "python": "3.11.6",
+    "platform": "Linux-6.17.0-1019-aws-x86_64-with-glibc2.36",
+    "cryptography": "46.0.7",
+    "kyber_py": "1.2.0",
+    "dilithium_py": "n/a",
+    "eval_clock_T0": 1760000000
+  },
+  "record_hash": "ce6292cabab7c6cbfc0413a8b91d146247764b1c144035c1b431a564953a2f10"
+}

@@ -1,0 +1,149 @@
+{
+  "experiment": "EP-PQC-001",
+  "expected": [
+    {
+      "case_id": "PQC-01",
+      "expected_decision": "ALLOW",
+      "expected_primary_reason": "ALL_STAGES_PASS",
+      "rationale": "Authorized requester, complete contract, approved algorithm, approved implementation, valid/fresh/bound evidence, constraints satisfied."
+    },
+    {
+      "case_id": "PQC-02",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_LEGACY_ALGORITHM",
+      "rationale": "Honest legacy RSA-2048 declaration; evidence consistent; constraint engine rejects legacy under PQC-required policy A."
+    },
+    {
+      "case_id": "PQC-03",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_MISSING",
+      "rationale": "Contract complete and requester authorized, but no manifest/signature/public-key evidence supplied."
+    },
+    {
+      "case_id": "PQC-04",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_ALGORITHM_CLAIM_MISMATCH",
+      "rationale": "Contract claims ML-KEM-768 but the supplied artifact is independently derived to be RSA-2048."
+    },
+    {
+      "case_id": "PQC-05",
+      "expected_decision": "DENY",
+      "expected_primary_reason": "AUTH_REQUESTER_NOT_AUTHORIZED",
+      "rationale": "Cryptography technically valid, but requester is not in the authority registry; authority FAIL -> DENY."
+    },
+    {
+      "case_id": "PQC-06",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_HASH_MISMATCH",
+      "rationale": "Evidence manifest signed over the original key; delivered key has one byte flipped -> recomputed hash != manifest hash."
+    },
+    {
+      "case_id": "PQC-07",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_STALE",
+      "rationale": "Evidence was valid when issued but violates the 3600s freshness window at evaluation time."
+    },
+    {
+      "case_id": "PQC-08",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_ARTIFACT_BINDING_MISMATCH",
+      "rationale": "Evidence corresponds to approved key KEY-KEM768-B while execution requests KEY-KEM768-A."
+    },
+    {
+      "case_id": "PQC-09",
+      "expected_decision": "ALLOW",
+      "expected_primary_reason": "ALL_STAGES_PASS",
+      "rationale": "Hybrid classical+PQC transition expressly permitted by policy A; complete evidence; approved ML-KEM-768 PQC half."
+    },
+    {
+      "case_id": "PQC-10",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_HYBRID_NOT_PERMITTED",
+      "rationale": "Hybrid mode presented where policy B requires PQC-only exclusive use; algorithm itself (ML-KEM-1024) is allowed, isolating the hybrid dimension."
+    },
+    {
+      "case_id": "PQC-11a",
+      "expected_decision": "ALLOW",
+      "expected_primary_reason": "ALL_STAGES_PASS",
+      "rationale": "Rollover part 1: ML-KEM-768 hybrid is permitted under policy version A."
+    },
+    {
+      "case_id": "PQC-11b",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_ALGORITHM_NOT_ALLOWED",
+      "rationale": "Rollover part 2: identical configuration is prohibited under later policy version B (768 withdrawn + hybrid withdrawn), evaluated fresh with a new nonce."
+    },
+    {
+      "case_id": "PQC-12",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_NONCE_BINDING_MISMATCH",
+      "rationale": "Valid authorization/evidence from a prior request is replayed for a new request; manifest nonce/request binding does not match the new request. Predeclared HOLD (evidence binding failure)."
+    },
+    {
+      "case_id": "PQC-13",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_UNTRUSTED_PROVIDER",
+      "rationale": "Correct algorithm supplied by a provider/library outside the policy allow-list."
+    },
+    {
+      "case_id": "PQC-14",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_PARAM_DOWNGRADE",
+      "rationale": "Valid ML-KEM family but parameter set ML-KEM-512 is below the policy-A minimum rank (768+)."
+    },
+    {
+      "case_id": "PQC-15",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_VERSION_BELOW_MINIMUM",
+      "rationale": "Approved algorithm/provider but library version 1.0.0 is below the policy minimum 1.2.0."
+    },
+    {
+      "case_id": "PQC-16",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_ALGORITHM_CLAIM_MISMATCH",
+      "rationale": "Contract claims ML-KEM-1024 but the supplied artifact is independently derived to be ML-KEM-768 (substitution)."
+    },
+    {
+      "case_id": "NC-00-baseline",
+      "expected_decision": "ALLOW",
+      "expected_primary_reason": "ALL_STAGES_PASS",
+      "rationale": "Control: unchanged baseline must still ALLOW."
+    },
+    {
+      "case_id": "NC-01-authority",
+      "expected_decision": "DENY",
+      "expected_primary_reason": "AUTH_REQUESTER_NOT_AUTHORIZED",
+      "rationale": "Change ONLY requester authority -> decision must change (DENY)."
+    },
+    {
+      "case_id": "NC-02-provider",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_UNTRUSTED_PROVIDER",
+      "rationale": "Change ONLY library/provider -> HOLD."
+    },
+    {
+      "case_id": "NC-03-policyversion",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_ALGORITHM_NOT_ALLOWED",
+      "rationale": "Change ONLY policy version (A->B) -> HOLD (768 withdrawn under B)."
+    },
+    {
+      "case_id": "NC-04-freshness",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_STALE",
+      "rationale": "Change ONLY evidence freshness -> HOLD."
+    },
+    {
+      "case_id": "NC-05-algorithm",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "CONSTRAINT_PARAM_DOWNGRADE",
+      "rationale": "Change ONLY algorithm/parameter set (768->512) -> HOLD."
+    },
+    {
+      "case_id": "NC-06-artifactbinding",
+      "expected_decision": "HOLD",
+      "expected_primary_reason": "EVID_ARTIFACT_BINDING_MISMATCH",
+      "rationale": "Change ONLY artifact/key binding -> HOLD."
+    }
+  ]
+}
