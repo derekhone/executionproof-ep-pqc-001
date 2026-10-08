@@ -60,6 +60,6 @@ See the README "Limitations" section.
 
 ## Citation & license
 
-- Citation metadata: `CITATION.cff`. **No DOI has been minted.**
-- License is **recommended but not finalized**: see `LICENSE_RECOMMENDATION.md`
-  (Apache-2.0 for code, CC-BY-4.0 for docs/data). Until a `LICENSE` is added, all rights reserved.
+- Citation metadata: `CITATION.cff`. **Zenodo DOI: [10.5281/zenodo.23248212](https://doi.org/10.5281/zenodo.23248212)** (concept DOI).
+- License: **Apache-2.0** for code (`LICENSE`) + **CC BY 4.0** for docs/data (`LICENSE-docs`); see `NOTICE`
+  and `LICENSE_RECOMMENDATION.md` for rationale.
