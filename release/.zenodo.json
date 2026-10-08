@@ -1,0 +1,31 @@
+{
+  "upload_type": "software",
+  "title": "EP-PQC-001 — Pre-Execution Post-Quantum Cryptographic Policy Verification (an ExecutionProof experiment)",
+  "version": "1.0.0",
+  "publication_date": "2026-10-08",
+  "access_right": "open",
+  "license": "Apache-2.0",
+  "creators": [
+    {
+      "name": "Hone, Derek",
+      "affiliation": "Remnant Fieldworks Inc."
+    }
+  ],
+  "description": "<p><strong>EP-PQC-001</strong> is a <strong>software-only</strong> ExecutionProof&trade; research experiment. It tests whether a pre-execution verification gateway can <strong>physically block</strong> a cryptographic operation from crossing an execution boundary when the system <strong>cannot independently prove</strong> that the operation satisfies a defined post-quantum cryptography (PQC) policy. The gateway does not trust labels: for each request it re-derives the true algorithm family from the raw key bytes (DER parsing for classical RSA/ECDH; exact FIPS-203 byte-lengths plus a functional encapsulation probe for ML-KEM), recomputes artifact hashes, verifies a real ML-DSA-65 evidence-manifest signature, and enforces authority, freshness, binding, nonce single-use, and policy constraints. The protected ML-KEM encapsulation runs only on ALLOW.</p><p><strong>Results (preserved verbatim):</strong> the root run EP-PQC-001 (24 cases) is <strong>PARTIAL / safety-PASS</strong> &mdash; decision 23/24, reason 22/24, <strong>zero false ALLOW</strong>, no safety-invariant violations, with two SAFE classification deviations (PQC-04, PQC-12) traced to test design rather than the enforcement engine. The remediation run EP-PQC-001R1 (26 cases), using the <strong>byte-identical</strong> engine with only the test design corrected, is a clean <strong>PASS</strong> (26/26 decision, 26/26 reason, zero false ALLOW).</p><p><strong>Limitations:</strong> this is a bounded software simulation. It does <strong>not</strong> claim CNSA 2.0 compliance, NIST certification, quantum resistance of ExecutionProof, production or defense readiness, HSM/TPM/live-TLS validation, or third-party validation, and it does not prove the security of ML-KEM or ML-DSA. Policy profiles are experimental, not compliance controls. Blinding is procedural (single author).</p>",
+  "notes": "No DOI is minted until deposit is authorized. One disclosed, non-fatal erratum: R1/proofrecords/proofrecord_PQC-17b.json carries an internal request_id of 'PQC-17a' (a generator typo); the record is otherwise correct (decision HOLD, reason EVID_NONCE_REPLAY) and its record_hash matches the frozen raw_decisions.json row for PQC-17b exactly. The frozen artifact was intentionally NOT modified, because editing a sealed ProofRecord would change its record_hash and break the evidence chain. See ERRATA.md. All ProofRecords self-verify via the standalone verify_proofrecords.py and reconcile against a consolidated HASHES.txt manifest.",
+  "keywords": [
+    "ExecutionProof",
+    "pre-execution verification",
+    "post-quantum cryptography",
+    "PQC policy",
+    "ML-KEM",
+    "ML-DSA",
+    "FIPS 203",
+    "FIPS 204",
+    "preregistration",
+    "reproducible research",
+    "fail-closed",
+    "execution boundary"
+  ],
+  "language": "eng"
+}

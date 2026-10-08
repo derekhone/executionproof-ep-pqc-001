@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you reference or reproduce this work, please cite it as below."
+title: "EP-PQC-001 — Pre-Execution Post-Quantum Cryptographic Policy Verification (an ExecutionProof experiment)"
+abstract: >-
+  EP-PQC-001 is a software-only ExecutionProof research experiment that tests whether a
+  pre-execution verification gateway can physically block a cryptographic operation from
+  crossing an execution boundary when the system cannot independently prove that the operation
+  satisfies a defined post-quantum cryptography (PQC) policy. The gateway re-derives the true
+  algorithm family from raw key bytes, recomputes artifact hashes, verifies a real ML-DSA-65
+  evidence-manifest signature, and enforces authority, freshness, binding, nonce single-use, and
+  policy constraints; the protected ML-KEM encapsulation runs only on ALLOW. The root run
+  (24 cases) is PARTIAL / safety-PASS (0 false ALLOW, no safety-invariant violations, two SAFE
+  classification deviations traced to test design); the remediation run R1 (26 cases), using the
+  byte-identical engine with only the test design corrected, is a clean PASS. This is a bounded
+  software simulation, not a compliance control or a security proof.
+type: software
+authors:
+  - family-names: Hone
+    given-names: Derek
+    affiliation: "Remnant Fieldworks Inc."
+version: "1.0.0"
+date-released: "2026-10-08"
+license: Apache-2.0
+keywords:
+  - ExecutionProof
+  - pre-execution verification
+  - post-quantum cryptography
+  - PQC policy
+  - ML-KEM
+  - ML-DSA
+  - FIPS 203
+  - FIPS 204
+  - preregistration
+  - reproducible research
+repository-code: "https://github.com/derekhone/ep-pqc-001"
+notes: >-
+  No DOI has been minted for this work. A DOI and a Zenodo repository entry will be added only
+  after a deposit is explicitly authorized. The repository-code URL is the intended location and
+  may not yet be populated. License is recommended (Apache-2.0 for code, CC-BY-4.0 for
+  documentation and data) but not yet finalized; see LICENSE_RECOMMENDATION.md.

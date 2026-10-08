@@ -1,0 +1,28 @@
+REPOSITORY DESCRIPTION (review-only — not published)
+====================================================
+
+--- Short description (GitHub "About" field, <=350 chars) ---
+Software-only ExecutionProof experiment: can a pre-execution gateway physically block a crypto
+operation when it cannot independently prove the operation meets a post-quantum policy? Root run =
+PARTIAL/safety-PASS; remediation R1 = PASS. Experimental, not a compliance control or security proof.
+
+--- Suggested repository name ---
+ep-pqc-001
+
+--- Suggested topics / tags ---
+executionproof, post-quantum-cryptography, pqc, ml-kem, ml-dsa, fips-203, fips-204,
+pre-execution-verification, fail-closed, reproducible-research, preregistration, security-research
+
+--- One-line tagline ---
+Pre-execution PQC policy verification, preregistered and independently verifiable — bounded software
+research, no compliance or security claims.
+
+--- Longer "About" paragraph (for a README header or repo social preview) ---
+EP-PQC-001 tests whether an ExecutionProof-style gateway can enforce "if it cannot be verified, it
+cannot execute" for post-quantum cryptography. The gateway re-derives the true algorithm family from
+raw key bytes, recomputes artifact hashes, verifies a real ML-DSA-65 manifest signature, and checks
+authority/freshness/binding/nonce/policy before a real ML-KEM encapsulation is allowed to cross the
+boundary. Preregistrations are hash-sealed before execution; every decision emits a hash-sealed
+ProofRecord; a standalone verifier re-checks the full chain. Verdicts are preserved verbatim (root =
+PARTIAL/safety-PASS; R1 = PASS). This is a software simulation only — see the limitations section
+before citing.
