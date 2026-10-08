@@ -153,7 +153,8 @@ with them.
 
 See `CITATION.cff`. This work is archived on Zenodo:
 
-> **DOI:** [10.5281/zenodo.23248212](https://doi.org/10.5281/zenodo.23248212) (Zenodo concept DOI — always resolves to the latest version)
+> **Concept DOI (always resolves to the latest version):** [10.5281/zenodo.23248211](https://doi.org/10.5281/zenodo.23248211)
+> **Version DOI (this release, v1.0.0):** [10.5281/zenodo.23248212](https://doi.org/10.5281/zenodo.23248212)
 
 GitHub source: <https://github.com/derekhone/executionproof-ep-pqc-001> ·
 Release: <https://github.com/derekhone/executionproof-ep-pqc-001/releases/tag/v1.0.0>

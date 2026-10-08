@@ -19,7 +19,14 @@ authors:
     given-names: Derek
     affiliation: "Remnant Fieldworks Inc."
 version: "1.0.0"
-doi: "10.5281/zenodo.23248212"
+doi: "10.5281/zenodo.23248211"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23248211"
+    description: "Concept DOI (all versions)"
+  - type: doi
+    value: "10.5281/zenodo.23248212"
+    description: "Version DOI (v1.0.0)"
 date-released: "2026-10-08"
 license:
   - Apache-2.0
@@ -39,4 +46,5 @@ repository-code: "https://github.com/derekhone/executionproof-ep-pqc-001"
 url: "https://github.com/derekhone/executionproof-ep-pqc-001"
 notes: >-
   License is finalized: Apache-2.0 for source code (LICENSE) and CC-BY-4.0 for documentation and
-  data (LICENSE-docs). Archived on Zenodo: concept DOI 10.5281/zenodo.23248212.
+  data (LICENSE-docs). Archived on Zenodo: concept DOI 10.5281/zenodo.23248211 (version DOI
+  10.5281/zenodo.23248212 for v1.0.0).

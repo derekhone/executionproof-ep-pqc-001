@@ -60,6 +60,6 @@ See the README "Limitations" section.
 
 ## Citation & license
 
-- Citation metadata: `CITATION.cff`. **Zenodo DOI: [10.5281/zenodo.23248212](https://doi.org/10.5281/zenodo.23248212)** (concept DOI).
+- Citation metadata: `CITATION.cff`. **Zenodo concept DOI: [10.5281/zenodo.23248211](https://doi.org/10.5281/zenodo.23248211)** (always latest); **version DOI (v1.0.0): [10.5281/zenodo.23248212](https://doi.org/10.5281/zenodo.23248212)**.
 - License: **Apache-2.0** for code (`LICENSE`) + **CC BY 4.0** for docs/data (`LICENSE-docs`); see `NOTICE`
   and `LICENSE_RECOMMENDATION.md` for rationale.
