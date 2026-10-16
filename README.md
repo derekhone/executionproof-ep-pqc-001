@@ -1,5 +1,12 @@
 # EP-PQC-001 — Pre-Execution Post-Quantum Cryptographic Policy Verification
 
+### Reference vs. Production
+
+This repository publishes research/reference material or public integration interfaces; its specific scope is below. It does not ship RF's private production backend. Experimental behavior, fixture policies, local/test keys and published results apply only to the identified implementation and stated conditions. Do not use public test keys as production trust roots or treat fixture conformance as proof of production security. This notice does not change existing licenses, results, preregistrations or preserved failures.
+
+This experiment uses local ML-DSA, not a production KMS signer. Its ProofRecord builder uses SHA-256 and does not sign those records. The experiment tests the stated PQC policy boundary; it is not a production-readiness claim.
+
+
 **An ExecutionProof™ validation experiment · Remnant Fieldworks Inc.**
 
 EP-PQC-001 is a **software-only** experiment that tests one narrow question:
